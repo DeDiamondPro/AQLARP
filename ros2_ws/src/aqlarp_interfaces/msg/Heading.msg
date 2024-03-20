@@ -1,0 +1,3 @@
+float32 x_heading
+float32 z_heading
+float32 rotation_heading
