@@ -12,7 +12,7 @@
 	- [Building The Main Body](ch05-02-building-body.md)
 - [Installing Software](ch06-01-installing-software.md)
 # API
-- [ROS2 Topics](ch06-01-ros2-topics.md)
+- [ROS2 Topics](ch07-01-ros2-topics.md)
 # Concepts explained
 
 - [Inverse Kinematics](ch08-00-inverse-kinematics.md)
