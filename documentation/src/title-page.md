@@ -1,12 +1,13 @@
 # AQLARP
 ![](img/AQLARP-render-transparent.png)
+
 Welcome to the AQLARP documentation. This documentation is built with [mdBook](https://github.com/rust-lang/mdBook)
 
 AQLARP stands for **A**ffordable **Q**uadruped **L**earning **A**nd **R**esearch **P**latform.
 
 AQLARP is licensed under the [MIT license](https://github.com/DeDiamondPro/AQLARP/blob/master/LICENSE).
 
-AQLARP was created as my final for high school.
+AQLARP was created as my final project for high school.
 
 > **🚨 This documentation might be incomplete**
 >

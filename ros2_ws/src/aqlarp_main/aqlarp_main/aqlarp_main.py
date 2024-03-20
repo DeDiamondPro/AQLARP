@@ -4,7 +4,7 @@ from rclpy.node import Node
 from aqlarp_interfaces.msg import JointAngles, GyroAngles, Heading
 from std_msgs.msg import Empty, Bool
 from src.kinematics import calc_angles
-from src.crawling import CrawlingGiat
+from src.crawling import CrawlingGait
 from src.utils import clamp, project_to_circle
 
 # Leg indexes:                          
@@ -20,9 +20,9 @@ class MainNode(Node):
         # Initialize the node
         super().__init__('aqlarp_main')
        
-        # Create a list with the supported giats, this is currentelly only the crawling giat
+        # Create a list with the supported gaits, this is currently only the crawling gait
         # But more can be added at a later data.
-        self.giats = [CrawlingGiat()]
+        self.gaits = [CrawlingGait()]
 
         # Initialize some default variables
         self.enabled = False
@@ -43,7 +43,7 @@ class MainNode(Node):
         # Run the main function 100 times per second
         self.timer = self.create_timer(0.01, self.update)
 
-    # Function that is called when new gyro values are recivied
+    # Function that is called when new gyro values are received
     def gyro_update(self, msg):
         # Save the new values
         self.gyro_pitch = msg.pitch
@@ -68,8 +68,8 @@ class MainNode(Node):
             self.disable_joints_publisher.publish(Empty())
             return
 
-        # Get the leg positions from the current giat
-        positions = self.giats[0].get_leg_positions(self.x_heading, self.z_heading, self.rotation_heading)
+        # Get the leg positions from the current gait
+        positions = self.gaits[0].get_leg_positions(self.x_heading, self.z_heading, self.rotation_heading)
 
         # Initialize a new empty joint angles object
         jointAngles = JointAngles()

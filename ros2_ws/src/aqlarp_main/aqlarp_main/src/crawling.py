@@ -2,9 +2,9 @@ from math import *
 from .utils import project_to_circle, ease, clamp
 from .leg_positions import LegPositions
 
-# The class for the crawling giat
-# In this giat one leg is lifted at a time
-class CrawlingGiat():
+# The class for the crawling gait
+# In this gait one leg is lifted at a time
+class CrawlingGait():
     def __init__(self):
         # Initialize the x value
         self.x = 0
@@ -16,7 +16,7 @@ class CrawlingGiat():
         # Get the heading by projecting the x and z values to a circle
         heading_x, heading_z = project_to_circle(moving_x, moving_z, False)
 
-        # Intiliaze an empty leg positions value
+        # Initialize an empty leg positions value
         positions = LegPositions()
 
         # If the robot isn't moving, set all legs to the default position and return

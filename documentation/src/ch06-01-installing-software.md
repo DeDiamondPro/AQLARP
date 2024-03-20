@@ -1,12 +1,12 @@
 # Installing software
 In this chapter we will go over installing and setting up all software required for AQLARP to work. You should already have AQLARP's GitHub repo cloned in your home directory as specified in [chapter 4.1](/ch04-01-raspberry-pi-setup.html#clone-the-github-repo)
 ## Installing ros2
-AQLARP is built using ros2 iron, it might work with later versions but this is untested. To install ros2 iron you can follow [their installation instructions](https://docs.ros.org/en/iron/Installation/Ubuntu-Install-Debians.html). After installing ros2 you must also install colcon, this is ros2's build system. To do this run the command below.
+AQLARP is built using ros2 iron, it might work with later versions but this is untested. To install ros2 iron you can follow [their installation instructions](https://docs.ros.org/en/iron/Installation/Ubuntu-Install-Debians.html). After installing ros2 you must also install colcon, which is ros2's build system. To do this run the command below.
 ```console
 $ sudo apt install python3-colcon-common-extensions
 ```
 ## Sourcing ros2 automatically
-To use ros2 you must source it every time, this can be annoying. To do this automatically run the following command.
+To use ros2 you must source it every time, which can be annoying. To do this automatically run the following command.
 ```console
 nano ~/.bashrc
 ```
@@ -17,7 +17,7 @@ source ~/new_ws/install/setup.bash
 ```
 Then press `Ctrl + O` to save and `Ctrl + X` to exit. To make this apply you should log out of the Raspberry Pi and start a new shell session.
 ## Installing dependencies
-To install dependencies first go into the workspace directory, to do this run the following command.
+To install dependencies first go into the workspace directory. To do this run the following command.
 ```console
 $ cd ~/AQLARP/ros2_ws
 ```
@@ -46,7 +46,7 @@ To run all code of AQLARP, and thus start the robot, run the following command.
 ```console
 $ ros2 launch aqlarp_main aqlarp.launch.py
 ```
-To control the robot you will have to connect a ps4 controller, you can either do this by using a cable and connecting it using one of the USB ports, or alternatively you can use the instructions in the next part to connect the ps4 controller wirelessly.
+To control the robot you will have to connect a ps4 controller. You can either do this by using a cable and connecting it using one of the USB ports, or alternatively you can use the instructions in the next part to connect the ps4 controller wirelessly.
 
 The controls for AQLARP are as follows:
 - Playstation button: start and stop the servos
@@ -100,9 +100,9 @@ ExecStart=/opt/ros/iron/bin/ros2 launch aqlarp_main aqlarp.launch.py
 [Install]
 WantedBy=multi-user.target
 ```
-If you use a different user then AQLARP or have cloned the GitHub repo in a different location, you will have to edit this file accordingly. To save the file press `Ctrl + O` and then press `Ctrl + X` to save.
+If you use a different user than AQLARP or have cloned the GitHub repo in a different location, you will have to edit this file accordingly. To save the file press `Ctrl + O` and then press `Ctrl + X` to save.
 
-Then finally to enable the service run the following command.
+Then finally to enable the service, run the following command.
 ```console
 $ sudo systemctl enable --now aqlarp.service
 ```

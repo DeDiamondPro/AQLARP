@@ -7,6 +7,6 @@ AQLARP's bill of materials is available [here](https://docs.google.com/spreadshe
 I would encourage you to look around and see if you can find parts for cheaper since these prices will change with time and depending on your area they may also vary.
 
 Additionally you will have to have the following tools:
-- Screw driver for the type of screws you chose
-- Sottering iron
+- Screw driver for the type of screws you choose
+- Soldering iron
 - 3D printer

@@ -3,7 +3,7 @@
 
 AQLARP stands for **A**ffordable **Q**uadruped **L**earning **A**nd **R**esearch **P**latform.
 
-AQLARP was created as my final for high school.
+AQLARP was created as my final project for high school.
 
 For more information please see the [documentation](https://aqlarp.dediamondpro.dev)
 
